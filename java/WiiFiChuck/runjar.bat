@@ -1,0 +1,1 @@
+C:\j\jdk\8x64u45\bin\java -jar target/WiiFiChuck.jar
