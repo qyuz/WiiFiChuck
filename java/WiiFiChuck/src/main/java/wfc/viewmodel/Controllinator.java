@@ -71,15 +71,16 @@ public class Controllinator implements Initializable {
 //        gc2.setFill(Color.BLUE);
 //        gc2.fillOval(100, 100, 20, 20);
 
-//        GridPane root = (GridPane) showerCnv.getParent();
-
+        GridPane root = (GridPane) showerCnv.getParent();
+//        drawNgonPiece(root, 3);
+        drawNgonPiece(root, 1);
+        drawNgonPiece(root, 3);
     }
 
-    private void drawNgonPiece(GridPane root) {
+    private void drawNgonPiece(GridPane root, int pieceNumber) {
         Polygon polygon = new Polygon();
         Double radius = new Double(75);
         Double startPoint = new Double(50);
-        int pieceNumber = 3;
         polygon.getPoints().addAll(radius * Math.cos(new Double(pieceNumber * 45 + 22.5) * Math.PI / 180) + startPoint);
         polygon.getPoints().addAll(radius * Math.sin(new Double(pieceNumber * 45 + 22.5) * Math.PI / 180) + startPoint);
         polygon.getPoints().addAll(radius * Math.cos(new Double((pieceNumber + 1) * 45 + 22.5) * Math.PI / 180) + startPoint);
